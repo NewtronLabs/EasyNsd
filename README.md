@@ -1,1 +1,1 @@
-# EasyMessages
+# Easy Messages
