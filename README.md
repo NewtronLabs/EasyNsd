@@ -70,18 +70,15 @@ val serviceInfoNsd = EasyNsdServiceInfo().apply {
     setServiceName("EasyNsd")
     setServiceType("_ipp._tcp.")
     setPort(1234)
-            }
+}
 
 // Note: This is a blocking call, user the callback if async behavior is desired.
-val serviceInfo = EasyNsd.with(this@MainActivity).registerService(
-        serviceInfoNsd
-    ).await()
+val serviceInfo = EasyNsd.with(this@MainActivity).registerService(serviceInfoNsd).await()
 ```
 ### EasyNsd - Service resolution
 Once a service is found it can be resolveed by calling resolveService with the service information object found.
 ```java
-val resolvedService =
-EasyNsd.with(this@MainActivity).resolveService(foundServiceInfoNsd).await()
+val resolvedService = EasyNsd.with(this@MainActivity).resolveService(foundServiceInfoNsd).await()
 ```
 
 ## License
