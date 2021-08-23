@@ -76,7 +76,7 @@ val serviceInfoNsd = EasyNsdServiceInfo().apply {
 val serviceInfo = EasyNsd.with(this@MainActivity).registerService(serviceInfoNsd).await()
 ```
 ### EasyNsd - Service resolution
-Once a service is found it can be resolveed by calling resolveService with the service information object found.
+Once a service is found it can be resolved by calling resolveService with the service information object found.
 ```java
 val resolvedService = EasyNsd.with(this@MainActivity).resolveService(foundServiceInfoNsd).await()
 ```
